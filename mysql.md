@@ -93,38 +93,38 @@ sudo mysqldump --single-transaction --host=localhost --user=root --password=plop
 Changer la valeur de l’auto increment
 -------------------------------------
 
-```mysql
+```sql
 ALTER TABLE Persons AUTO_INCREMENT=100
 ```
 
 Trouver les duplications et les supprimer
 -----------------------------------------
 
-```mysql
+```sql
 SELECT *, COUNT(*) AS count FROM favorites GROUP BY user_id, recipe_id HAVING count > 1
 ```
 
-```mysql
+```sql
 ALTER IGNORE TABLE favorites ADD UNIQUE INDEX(user_id, recipe_id);
 ```
 
 ou
 
-```mysql
+```sql
 DELETE f1 FROM favorites f1, favorites f2 WHERE f1.id > f2.id AND f1.user_id = f2.user_id AND f1.recipe_id = f2.recipe_id
 ```
 
 Afficher les éléments dupliqués et aggréger les éléments différents
 -------------------------------------------------------------------
 
-```mysql
+```sql
 SELECT COUNT(order_id) AS count, order_id, GROUP_CONCAT(user_id) FROM user_billing GROUP BY order_id HAVING count > 1
 ```
 
 Ne pas vérifier les clés étrangères
 -----------------------------------
 
-```mysql
+```sql
 SET FOREIGN_KEY_CHECKS=0;
 UPDATE instructions SET media_id = 3100 WHERE media_id = 752;
 UPDATE media SET id = 3100 WHERE id = 752;
