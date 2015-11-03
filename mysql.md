@@ -130,3 +130,10 @@ UPDATE instructions SET media_id = 3100 WHERE media_id = 752;
 UPDATE media SET id = 3100 WHERE id = 752;
 SET FOREIGN_KEY_CHECKS=1;
 ```
+
+Rechercher anti-slash
+---------------------
+
+```sql
+SELECT * FROM parts WHERE content LIKE '%\\"%' ESCAPE '|'
+```
