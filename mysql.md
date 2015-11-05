@@ -5,7 +5,7 @@ Se connecter
 ------------
 
 ```bash
-mysql ~~u root~~p
+mysql -u root -p
 ```
 
 Réinitialiser le mot de passe root
