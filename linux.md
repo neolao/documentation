@@ -280,3 +280,15 @@ Connaitre la version de debian
 ```bash
 lsb_release -d
 ```
+
+
+Créer un SOCKS Proxy
+--------------------
+
+Sur la machine distante :
+
+```bash
+ssh -N -D 0.0.0.0:1080 localhost
+```
+
+Puis modifier la config du navigateur pour utiliser la machine distante sur le port `1080`.
