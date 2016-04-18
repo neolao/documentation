@@ -102,3 +102,19 @@ Match User nini
 ```
 
 
+Proxy
+-----
+
+```
+Host preprod
+Hostname preprod.mywebsite.com
+ProxyCommand ssh www nc %h %p
+User neolao
+```
+
+```
+Host www
+Hostname 123.123.90.90
+ForwardAgent yes
+User neolao
+```
