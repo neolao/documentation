@@ -260,3 +260,22 @@ Raspberry Pi 3 Wifi
 sudo BRANCH=next rpi-update
 sudo iwconfig wlan0 power off
 ```
+
+
+Audio avec Hifiberry
+--------------------
+
+https://jeffskinnerbox.wordpress.com/2012/11/15/getting-audio-out-working-on-the-raspberry-pi/
+
+```bash
+sudo apt-get install alsa-utils mpg321 lame mplayer
+```
+
+```bash
+speaker-test -t sine -f 440 -c 2 -s 1
+```
+
+```bash
+curl "https://translate.google.com/translate_tts?ie=UTF-8&q=hello%20dear&tl=en&total=1&idx=0&textlen=10&tk=104594.502926&client=t&prev=input&ttsspeed=0.24" -o tts.mp3
+mplayer -ao alsa:device=hw=0.0 tts.mp3
+```
