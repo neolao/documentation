@@ -279,3 +279,9 @@ speaker-test -t sine -f 440 -c 2 -s 1
 curl "https://translate.google.com/translate_tts?ie=UTF-8&q=hello%20dear&tl=en&total=1&idx=0&textlen=10&tk=104594.502926&client=t&prev=input&ttsspeed=0.24" -o tts.mp3
 mplayer -ao alsa:device=hw=0.0 tts.mp3
 ```
+
+Il faut que l'utilisateur soit dans le groupe `audio` :
+
+```
+sudo adduser pi audio
+```
