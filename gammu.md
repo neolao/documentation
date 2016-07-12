@@ -3,6 +3,29 @@ gammu
 
 [http://fr.wammu.eu/phones/](http://fr.wammu.eu/phones/)
 
+
+Identifier l'appareil
+---------------------
+
+```bash
+gammu identify
+```
+
+Entrer le code PIN
+------------------
+
+```bash
+gammu entersecuritycode PIN 1234
+```
+
+Envoyer un message
+------------------
+
+```bash
+echo "coucou" | gammu sendsms TEXT "+33614813588"
+```
+
+
 Avec la clé Huawei E220
 -----------------------
 
