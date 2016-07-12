@@ -22,7 +22,7 @@ Envoyer un message
 ------------------
 
 ```bash
-echo "coucou" | gammu sendsms TEXT "+33614813588"
+gammu sendsms TEXT "+33614813588" -text "coucou"
 ```
 
 
