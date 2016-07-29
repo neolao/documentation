@@ -46,6 +46,7 @@ while (true) {
     $json = file_get_contents('https://ws.ovh.com/dedicated/r2/ws.dispatcher/getAvailability2');
     $data = json_decode($json);
 
+    $available = false;
     foreach ($data->answer->availability as $availability) {
         $reference = $availability->reference;
         if ($reference !== '160sk1') {
@@ -55,7 +56,9 @@ while (true) {
         $metaZones = $availability->metaZones;
         foreach ($metaZones as $metaZone) {
             if (!in_array($metaZone->availability, ['unavailable', 'unknown'])) {
-                echo '!';
+                $available = true;
+                $date = new \DateTime;
+                echo "\n", $date->format('[Y-m-d H:i:s]'), ' Available!', "\n";
                 exec('osascript -e \'display notification "KIMSUFI disponible !!!" with title "OVH"\'');
                 break;
             }
@@ -64,8 +67,9 @@ while (true) {
         break;
     }
 
-    echo '.';
+    if (!$available) {
+        echo '.';
+    }
     sleep(10);
 }
-
 ```
