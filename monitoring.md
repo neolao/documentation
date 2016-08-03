@@ -14,7 +14,8 @@ Dernière connexion
 À mettre dans `/etc/ssh/sshrc` :
 
 ```bash
-message="$(date +"%Y-%m-%d %H:%M"): ${USER}"
+ip=$(echo $SSH_CLIENT|awk '{print $1}')
+message="NS11 [$(date +"%Y-%m-%d %H:%M")] ${USER} ($ip)"
 
 curl --data-urlencode "value=$message" "http://jeedom.url/core/api/jeeApi.php?apikey=1234&type=httpRemoteEvent&eqId=40" > /dev/null 2>&1
 ```
