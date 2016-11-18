@@ -8,6 +8,13 @@ Se connecter
 mysql -u root -p
 ```
 
+Autoriser la connexion externe
+------------------------------
+
+- Changer le `bind-address` dans `/etc/mysql/my.cnf` et mettre l'IP du serveur
+- Autoriser le port `3306`
+
+
 Réinitialiser le mot de passe root
 ----------------------------------
 
