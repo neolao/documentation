@@ -39,4 +39,4 @@ Personnalisation
 ----------------
 
 * [vim.zip](vim.zip)
-* [.zshrc](.zshrc)
+* [.zshrc](https://raw.githubusercontent.com/neolao/documentation/master/.zshrc)
