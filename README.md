@@ -40,4 +40,4 @@ Personnalisation
 
 * [vim.zip](vim.zip)
 * [.zshrc](https://raw.githubusercontent.com/neolao/documentation/master/.zshrc)
-* [.tmux_conf](https://raw.githubusercontent.com/neolao/documentation/master/.tmux_conf)
+* [.tmux.conf](https://raw.githubusercontent.com/neolao/documentation/master/.tmux.conf)
