@@ -1,0 +1,75 @@
+# Hotkey sur p
+unbind-key C-b
+set -g prefix C-p
+bind-key C-p send-prefix
+
+# Même hack que sur screen lorsqu'on veut profiter du scroll du terminal (xterm ...)
+set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+
+# Historique (defaut 2000)
+set-option -g history-limit 100000
+
+# Il faut choisir un derivé de screen, 256 couleurs c'est bien !
+set -g default-terminal "screen-256color"
+
+# Gestion de la souris
+#set -g mouse-select-pane on
+#setw -g mode-mouse on
+
+# Activer UTF-8
+set -g status-utf8 on
+setw -g utf8 on
+
+# Pour etre alerté sur un changement dans une autre fenêtre
+setw -g monitor-activity on
+#set -g visual-activity on
+#set -g visual-bell on
+
+# Numéroter a partir de 1, pratique pour l'accès direct
+set -g base-index 1
+
+# Répercuter le contenu de la fenetre dans la barre de titre
+# Reference des string : man tmux (status-left)
+#set -g set-titles on
+#set -g set-titles-string '#H #W #T' # host window command
+#setw -g automatic-rename
+set-option -g allow-rename off
+
+# Raccourcis
+bind-key        l           swap-window -t -1
+bind-key        m           swap-window -t +1
+bind-key        Left        previous-window
+bind-key        Right       next-window
+bind-key        S           split-window
+bind-key        |           split-window -h
+bind-key        Tab         select-pane -t :.+
+bind-key        A           command-prompt -I "rename-window "
+bind-key -r     M-Up        resize-pane -U 1
+bind-key -r     M-Down      resize-pane -D 1
+bind-key -r     M-Left      resize-pane -L 1
+bind-key -r     M-Right     resize-pane -R 1
+
+#########
+# Thème #
+#########
+set -g status-bg blue
+set -g status-fg white
+set -g status-left ''
+set -g status-right ''
+#set -g status-right '#[fg=yellow]%d/%m/%Y %H:%M:%S '
+#set-option -g status-interval 1
+
+# Titre de l'onglet
+set-window-option -g window-status-current-format " #I #W "
+set-window-option -g window-status-format " #I #W "
+
+# Couleur de l'onglet actif
+set-window-option -g window-status-current-fg white
+set-window-option -g window-status-current-bg red
+set-window-option -g window-status-current-attr bright
+
+# Couleur du séparateur de panneaux
+set -g pane-border-fg blue
+set -g pane-border-bg default
+set -g pane-active-border-fg blue
+set -g pane-active-border-bg default
