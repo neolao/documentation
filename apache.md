@@ -169,3 +169,10 @@ Authentification demandée sur un domain mais pas un autre
 
 </VirtualHost>
 ```
+
+Activer le module SSL
+---------------------
+
+```bash
+sudo a2enmod ssl
+```
