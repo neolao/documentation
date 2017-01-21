@@ -27,6 +27,11 @@ ssh-keygen -t ecdsa
 ssh-copy-id -i ~/.ssh/id_ecdsq.pub "<username>@<ipaddress> -p 1234"
 ```
 
+```bash
+ssh-keygen -o -a 100 -t ed25519
+ssh-copy-id -i ~/.ssh/id_ed25519.pub "<username>@<ipaddress>"
+```
+
 Restriction par clé
 -------------------
 
