@@ -4,7 +4,7 @@ WIFI
 Reconnecter le wifi automatiquement
 -----------------------------------
 
-Fichier `/root/checkwanup` :
+Fichier `/root/wifi-check.sh` :
 
 ```bash
 #!/bin/bash
@@ -19,5 +19,5 @@ fi
 ```
 
 ```
-*/15 * * * * /bin/bash /root/checkwanup
+*/15 * * * * /bin/bash /root/wifi-check.sh
 ```
