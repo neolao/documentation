@@ -22,6 +22,11 @@ Configurer le terminal
 sudo dpkg-reconfigure console-setup
 ```
 
+Activer SSH sur Raspbian via un fichier
+---------------------------------------
+
+Créer le fichier `/boot/ssh`.
+
 Wifi via un fichier de configuration de Raspbian
 ------------------------------------------------
 
