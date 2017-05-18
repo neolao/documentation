@@ -22,6 +22,19 @@ Configurer le terminal
 sudo dpkg-reconfigure console-setup
 ```
 
+Wifi via un fichier de configuration de Raspbian
+------------------------------------------------
+
+Créer `/boot/wpa_supplicant.conf` :
+
+```
+network={
+    ssid="YOUR_SSID"
+    psk="YOUR_PASSWORD"
+    key_mgmt=WPA-PSK
+}
+```
+
 Wifi
 ----
 
