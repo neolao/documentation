@@ -79,6 +79,8 @@ Bluetooth
 
 ```bash
 sudo apt-get install -y bluetooth bluez-utils blueman
+reboot
+
 hcitool scan
 sudo bluetooth-agent 0000 AC:22:0B:65:FD:AA
 ```
