@@ -45,3 +45,17 @@ server {
     }
 }
 ```
+
+Configurer apache :
+
+```
+<VirtualHost *:443>
+        DocumentRoot /var/www/example.com
+        ServerName example.com
+        Header always add Strict-Transport-Security "max-age=15768000; includeSubDomains; preload"
+
+        SSLEngine on
+        SSLCertificateFile /etc/letsencrypt/live/example.com/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
+</VirtualHost>
+```
