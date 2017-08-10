@@ -10,6 +10,6 @@ then
 fi
 
 cd $HOME
-zip -r $filePath .vim
-zip $filePath .vimrc
+zip -9 -r $filePath .vim
+zip -9 $filePath .vimrc
 
