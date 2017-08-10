@@ -220,3 +220,9 @@ Récupérer le hash d'une branche
 ```bash
 git rev-parse origin/1.1.x
 ```
+
+Effacer un gros fichier de l'historique
+---------------------------------------
+```bash
+git filter-branch --tree-filter 'rm -f vim.zip' HEAD
+```
