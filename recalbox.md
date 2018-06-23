@@ -48,10 +48,3 @@ sharenetwork_cmd3=mount -o nolock,proto=tcp 10.0.1.8:/volume2/recalbox/saves /re
 sharenetwork_cmd4=mount -o nolock,proto=tcp 10.0.1.8:/volume2/recalbox/screenshots /recalbox/share/screenshots
 ```
 
-Et ça c'est cadeau :
-
-```
-sharedevice=NETWORK
-sharenetwork_smb1=BIOS@recalbox.neolao.com:bios:username=guest,password=guest
-sharenetwork_smb2=ROMS@recalbox.neolao.com:roms:username=guest,password=guest
-```
