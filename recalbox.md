@@ -52,6 +52,6 @@ Et ça c'est cadeau :
 
 ```
 sharedevice=NETWORK
-sharenetwork_smb1=BIOS@recalbox.neolao.com:bios:username=guest
-sharenetwork_smb2=ROMS@recalbox.neolao.com:roms:username=guest
+sharenetwork_smb1=BIOS@recalbox.neolao.com:bios:username=guest,password=guest
+sharenetwork_smb2=ROMS@recalbox.neolao.com:roms:username=guest,password=guest
 ```
