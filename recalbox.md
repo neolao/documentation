@@ -28,3 +28,22 @@ Dans `recalbox.conf` :
 ```
 global.videomode=CEA 31 HDMI
 ```
+
+Montage réseau
+--------------
+
+Passer en read/write :
+
+```bash
+mount -o remount,rw /boot
+```
+
+Modifier `/boot/recalbox-boot.conf` :
+
+```
+sharedevice=NETWORK
+sharenetwork_cmd1=mount -o nolock,proto=tcp 10.0.1.8:/volume2/recalbox/bios /recalbox/share/bios
+sharenetwork_cmd2=mount -o nolock,proto=tcp 10.0.1.8:/volume2/recalbox/roms /recalbox/share/roms
+sharenetwork_cmd3=mount -o nolock,proto=tcp 10.0.1.8:/volume2/recalbox/saves /recalbox/share/saves
+sharenetwork_cmd4=mount -o nolock,proto=tcp 10.0.1.8:/volume2/recalbox/screenshots /recalbox/share/screenshots
+```
