@@ -43,3 +43,11 @@ sysctl kern.maxfiles
 ```
 
 https://superuser.com/questions/433746/is-there-a-fix-for-the-too-many-open-files-in-system-error-on-os-x-10-7-1
+
+
+Voir les répertoires NFS partagés d'une machine distante
+--------------------------------------------------------
+
+```bash
+showmount -e 10.0.1.8
+```
