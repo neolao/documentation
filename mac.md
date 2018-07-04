@@ -51,3 +51,12 @@ Voir les répertoires NFS partagés d'une machine distante
 ```bash
 showmount -e 10.0.1.8
 ```
+
+Touche `cmd` bloqué virtuellement
+---------------------------------
+
+https://discussions.apple.com/thread/4815782?answerId=26823873022#26823873022
+
+- Aller dans accessibilité
+- Clavier
+- Activer et désactiver les touches à auto-maintien
