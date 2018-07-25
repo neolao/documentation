@@ -1,6 +1,13 @@
 MAC
 ===
 
+Changer le répertoire par défaut des screenshots
+------------------------------------------------
+
+```bash
+defaults write com.apple.screencapture location /Users/neolao/Screenshots
+```
+
 Créer un ram disk
 -----------------
 
