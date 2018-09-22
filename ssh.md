@@ -12,6 +12,17 @@ ssh -L 10000:127.0.0.1:10000 -N login@serveur
 ssh -L 7000:10.16.11.1:6379 -N login@serveur
 ```
 
+Proxy web
+---------
+
+```bash
+ssh -ND 1080 login@serveur
+```
+
+```bash
+/Applications/Google\ Chrome.app/Contents/ --proxy-server="socks5://localhost:1080"
+```
+
 Le premier port est celui en local, le second est le vrai.
 
 Authentification par un système de clés publique/privé
