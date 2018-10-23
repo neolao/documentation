@@ -67,3 +67,14 @@ https://discussions.apple.com/thread/4815782?answerId=26823873022#26823873022
 - Aller dans accessibilité
 - Clavier
 - Activer et désactiver les touches à auto-maintien
+
+Erreur à l'installation de zsh
+------------------------------
+
+```
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+```
+
+```bash
+xcode-select --install
+```
