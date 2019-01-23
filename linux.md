@@ -292,3 +292,12 @@ ssh -N -D 0.0.0.0:1080 localhost
 ```
 
 Puis modifier la config du navigateur pour utiliser la machine distante sur le port `1080`.
+
+
+Augmenter le nombre de fichier qu'on peut watch
+-----------------------------------------------
+
+```bash
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+```
