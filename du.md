@@ -8,6 +8,13 @@ Taille total des fichiers de la même extension
 du -ak | awk 'BEGIN {sum=0} /\.jpg$/ {sum+=$1} END {print sum}'
 ```
 
+Taille des fichiers d'une liste
+-------------------------------
+
+```bash
+du -c $(cat list.txt)
+```
+
 Taille d’un répertoire
 ----------------------
 
