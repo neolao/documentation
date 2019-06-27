@@ -34,3 +34,11 @@ OSX : compter
 ```bash
 find . -type f -name '*.jpg' | wc -l
 ```
+
+Taille des fichiers d'un type
+-----------------------------
+
+```bash
+find . -type f -name '*.jpg' -exec du -ch {} +
+find . -type f -name '*.jpg' -exec du -ch {} + | grep total$
+```
