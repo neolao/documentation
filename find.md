@@ -42,3 +42,10 @@ Taille des fichiers d'un type
 find . -type f -name '*.jpg' -exec du -ch {} +
 find . -type f -name '*.jpg' -exec du -ch {} + | grep total$
 ```
+
+Créer un fichier qui aggrège tous les contenus trouvés
+------------------------------------------------------
+
+```bash
+find . -type f -path "./*/www/locale/*" -name 'en_US.csv' -print -exec cat {}  \; > /tmp/locales.csv
+```
