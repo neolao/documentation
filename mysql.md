@@ -21,24 +21,42 @@ Réinitialiser le mot de passe root
 ### Stopper mysql
 
 ```bash
-sudo /etc/init.d/mysql stop
+sudo systemctl stop mysql.service
 ```
 
 ### Redémarrer mysql avec une option spéciale
 
 ```bash
-sudo mysqld_safe --skip-grant-tables
+sudo mysqld_safe --skip-grant-tables &
 ```
 
 ### Se connecter en root sur la table mysql
 
 ```bash
-mysql -p -u root
+mysql -u root
 ```
 
 ```
 mysql> UPDATE user SET Password=PASSWORD('nouveaumotdepasse') WHERE User='root';
 mysql> FLUSH PRIVILEGES;
+mysql> EXIT;
+```
+
+### Arrêter le serveur
+```bash
+sudo mysqladmin -u root -p shutdown
+```
+
+### Redémarrer mysql
+
+```bash
+sudo systemctl start mysql.service
+```
+
+On peut maintenant se connecter
+
+```bash
+sudo mysql -u root -p
 ```
 
 Quelques requêtes utiles
