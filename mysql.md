@@ -99,6 +99,7 @@ Ajouter un utilisateur
     mysql> GRANT USAGE ON mabase.* TO 'neolao'@'%' IDENTIFIED BY 'motdepasse';
 
     mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON mabase.* TO 'neolao'@'localhost' IDENTIFIED BY 'motdepasse';
+    mysql> GRANT ALL PRIVILEGES ON *.* TO 'neolao'@'%';
     mysql> FLUSH PRIVILEGES;
 
 Importer
