@@ -24,3 +24,4 @@ Bannir manuellement une IP
 ```bash
 sudo fail2ban-client -vvv set ssh banip xx.xx.xx.xx
 ```
+Mais il va être unban après le délai configuré.
