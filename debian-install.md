@@ -97,7 +97,7 @@ sudo apt-get install zsh
 ### Importer la configuration personnalisée
 ```bash
 cd ~/
-wget http://doc.neolao.com/zsh.zip
+wget https://github.com/neolao/documentation/raw/master/zsh.zip
 unzip zsh.zip
 ```
 
