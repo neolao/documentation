@@ -1,0 +1,14 @@
+fsdisk
+======
+
+Lister les disques disponibles
+------------------------------
+```bash
+sudo fdisk -l
+```
+
+Manipuler les partitions
+------------------------
+```bash
+sudo fsdisk /dev/sdq
+```
