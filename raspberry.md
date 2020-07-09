@@ -305,3 +305,11 @@ Il faut que l'utilisateur soit dans le groupe `audio` :
 ```
 sudo adduser pi audio
 ```
+
+Synchroniser le temps
+---------------------
+
+```bash
+timedatectl status
+sudo timedatectl set-timezone Europe/Paris
+```
