@@ -226,3 +226,9 @@ Effacer un gros fichier de l'historique
 ```bash
 git filter-branch --tree-filter 'rm -f vim.zip' HEAD
 ```
+
+Indiquer quelle clé SSH utiliser
+--------------------------------
+```bash
+git config core.sshCommand 'ssh -i /home/me/.ssh/id_ed25519_special'
+```
