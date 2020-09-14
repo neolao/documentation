@@ -78,3 +78,21 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
 ```bash
 xcode-select --install
 ```
+
+Empêcher le sleep
+-----------------
+
+Vérifier les préférences avec :
+```bash
+pmset -g
+```
+
+Désactiver :
+```bash
+sudo pmset -a disablesleep 1
+```
+
+Par défaut :
+```bash
+sudo pmset -a disablesleep 0
+```
