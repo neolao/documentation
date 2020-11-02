@@ -9,6 +9,14 @@ curl -i -X POST -H "Content-Type: application/json" -d '{"email":"neolao@gmail.c
 curl -i -X POST -H "X-User-Id: 52b2c74f834d222a34000002" -H "X-Session-Token: 1fa24ea765881795564da2ac58d75a396e789cbd" -F 'avatar=@localfile.jpg' http://localhost/api
 ```
 
+Uploader un fichier sans fichier
+--------------------------------
+
+```bash
+myFile='{"foo": "bar"}'
+curl 'https://url' -F "fileField=$myFile;filename=source.json"
+```
+
 Récupérer le code HTTP
 ----------------------
 
