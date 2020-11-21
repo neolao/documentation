@@ -96,3 +96,8 @@ Par défaut :
 ```bash
 sudo pmset -a disablesleep 0
 ```
+
+Forcer à quitter
+----------------
+
+Ouvrir la liste avec command + option + escape
