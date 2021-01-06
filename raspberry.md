@@ -33,6 +33,10 @@ Wifi via un fichier de configuration de Raspbian
 Créer `/boot/wpa_supplicant.conf` :
 
 ```
+country=fr
+update_config=1
+ctrl_interface=/var/run/wpa_supplicant
+
 network={
     ssid="YOUR_SSID"
     psk="YOUR_PASSWORD"
