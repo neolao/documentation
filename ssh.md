@@ -134,3 +134,15 @@ Hostname 123.123.90.90
 ForwardAgent yes
 User neolao
 ```
+
+Autoriser la connexion sur un serveur connecté à un VPN
+-------------------------------------------------------
+
+```bash
+my_public_ip=1.2.3.4
+my_default_gateway=1.1.1.1
+
+ip rule add table 128 from $my_public_ip
+ip route add table 128 to $my_public_ip dev eth0
+ip route add table 128 default via $my_default_gateway
+```
