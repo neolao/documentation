@@ -317,3 +317,17 @@ Synchroniser le temps
 timedatectl status
 sudo timedatectl set-timezone Europe/Paris
 ```
+
+Désactiver le Bluetooth
+-----------------------
+
+Ajouter `dtoverlay=disable-bt` dans `/boot/config.txt`.
+
+```bash
+sudo systemctl disable hciuart
+```
+
+Désactiver wifi
+---------------
+
+Ajouter `dtoverlay=disable-wifi` dans `/boot/config.txt`.
