@@ -331,3 +331,62 @@ Désactiver wifi
 ---------------
 
 Ajouter `dtoverlay=disable-wifi` dans `/boot/config.txt`.
+
+Pico
+----
+
+1. Install the SDK:
+   1. In Terminal, go to your projects directory, eg. ~/git
+   2. Run git clone -b master --recurse-submodules https://github.com/raspberrypi/pico-sdk.git
+   3. Edit your .bash_profile or .zshrc and add: export PICO_SDK_PATH="$HOME/git/pico-sdk"
+2. Install the toolchain:
+   1. brew install cmake
+   2. brew tap ArmMbed/homebrew-formulae
+   3. brew install arm-none-eabi-gcc
+3. Configure the IDE:
+   1. Run — or install and then run — Microsoft Visual Studio Code.
+   2. Click on the Extensions icon.
+   3. Enter CMake Tools in the search field.
+   4. Locate CMake Tools by Microsoft and click Install.
+4. Set up a project:
+   1. mkdir PicoTest
+   2. cd PicoTest
+   3. cp ../pico-sdk/external/pico_sdk_import.cmake .
+   4. Create CMakeLists.txt — see listing below.
+   5. touch source.h
+   6. echo '#include "source.h"' > source.c
+5. From within Visual Studio Code, open the folder PicoTest.
+6. When CMakeTools asks you if to configure project, say yes.
+7. When asked to select a kit, select GCC for arm-none-eabi x.y.z.
+
+```
+# What CMake to start at
+cmake_minimum_required(VERSION 3.12)
+ 
+# Include the subsidiary .cmake file to get the SDK
+include(pico_sdk_import.cmake)
+ 
+# Set the name and version of the project
+project(PicoTest VERSION 1.0.0)
+ 
+# Link the Project to a source file (step 4.6)
+add_executable(PicoTest source.c)
+ 
+# Link the Project to an extra library (pico_stdlib)
+target_link_libraries(PicoTest pico_stdlib)
+ 
+# Initalise the SDK
+pico_sdk_init()
+ 
+# Enable USB, UART output
+pico_enable_stdio_usb(PicoTest 1)
+pico_enable_stdio_uart(PicoTest 1)
+ 
+# Enable extra outputs (SWD?)
+pico_add_extra_outputs(PicoTest)
+```
+
+```c
+#include <stdio.h>
+#include "pico/stdlib.h"
+```
