@@ -341,8 +341,10 @@ Pico
    3. Edit your .bash_profile or .zshrc and add: export PICO_SDK_PATH="$HOME/git/pico-sdk"
 2. Install the toolchain:
    1. brew install cmake
-   2. brew tap ArmMbed/homebrew-formulae
-   3. brew install arm-none-eabi-gcc
+   2. brew install doxygen
+   3. brew install graphviz
+   4. brew tap ArmMbed/homebrew-formulae
+   5. brew install arm-none-eabi-gcc
 3. Configure the IDE:
    1. Run — or install and then run — Microsoft Visual Studio Code.
    2. Click on the Extensions icon.
