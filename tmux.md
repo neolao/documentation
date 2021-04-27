@@ -20,3 +20,11 @@ Détacher tous les autres de cette session
 ```bash
 tmux detach -a
 ```
+
+Changer le working directory pendant une session
+---
+
+Dans le prompt tmux:
+```
+:attach-session -t . -c /new/working/dir
+```
