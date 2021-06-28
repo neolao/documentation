@@ -28,3 +28,17 @@ Dans le prompt tmux:
 ```
 :attach-session -t . -c /new/working/dir
 ```
+
+Afficher les numéros des "panes"
+---
+
+```bash
+ctrl-p q
+```
+
+Échanger 2 "panes"
+---
+
+```
+:swap-pane -s 1 -t 2
+```
