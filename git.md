@@ -232,3 +232,14 @@ Indiquer quelle clé SSH utiliser (Git > 2.10)
 ```bash
 git config core.sshCommand 'ssh -i /home/me/.ssh/id_ed25519_special'
 ```
+
+Refaire un .git corrompu
+------------------------
+```bash
+rm -fr .git
+git init
+git remote add origin [your-git-remote-url]
+git fetch
+git reset --mixed origin/master
+git branch --set-upstream-to=origin/master master  
+```
