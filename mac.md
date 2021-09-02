@@ -101,3 +101,14 @@ Forcer à quitter
 ----------------
 
 Ouvrir la liste avec command + option + escape
+
+Activer/Désactiver l'indexation Spotlight
+-----------------------------------------
+
+```bash
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+```
+
+```bash
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+```
