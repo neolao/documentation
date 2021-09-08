@@ -319,3 +319,9 @@ Pour limiter d'une manière permanente, il faut éditer `/etc/systemd/journald.c
 ```
 SystemMaxFileSize=100M
 ```
+
+et redémarrer
+
+```bash
+sudo service systemd-journald restart
+```
