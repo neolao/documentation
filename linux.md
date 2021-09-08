@@ -301,3 +301,21 @@ Augmenter le nombre de fichier qu'on peut watch
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 ```
+
+`/var/log/journal` volumineux
+-----------------------------
+
+On peut diminuer la taille comme ça
+
+```bash
+journalctl --vacuum-size=100M
+```
+
+```bash
+journalctl --vacuum-time=10d
+```
+
+Pour limiter d'une manière permanente, il faut éditer `/etc/systemd/journald.conf`:
+```
+SystemMaxFileSize=100M
+```
