@@ -146,3 +146,17 @@ ip rule add table 128 from $my_public_ip
 ip route add table 128 to $my_public_ip dev eth0
 ip route add table 128 default via $my_default_gateway
 ```
+
+Générer la clé publique à partir de la privée
+---------------------------------------------
+
+```bash
+ssh-keygen -f private.key -y > public.key
+```
+
+Générer le fingerprint de la clé publique
+-----------------------------------------
+
+```bash
+ssh-keygen -lf public.key
+```
