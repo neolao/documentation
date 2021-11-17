@@ -160,3 +160,10 @@ Générer le fingerprint de la clé publique
 ```bash
 ssh-keygen -lf public.key
 ```
+
+Remove known host
+-----------------
+
+```bash
+ssh-keygen -f ~/.ssh/known_hosts -R "hostname"
+```
