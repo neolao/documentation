@@ -14,10 +14,7 @@ apt-get install sudo
 ```
 
 ```bash
-vim /etc/sudoers
-```
-```
-neolao ALL=(ALL:ALL) ALL
+usermod -aG sudo neolao
 ```
 
 ### Transférer la clé publique
