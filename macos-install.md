@@ -27,7 +27,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 https://github.com/zplug/zplug
 
 ```bash
-brew install zplug
+zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 ```
 
 ## Install powerlevel9k theme
