@@ -37,3 +37,9 @@ https://github.com/Powerlevel9k/powerlevel9k
 ```bash
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 ```
+
+## Install .zshrc
+
+```bash
+wget https://raw.githubusercontent.com/neolao/documentation/master/zsh/.zshrc
+```
