@@ -43,3 +43,9 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 ```bash
 wget https://raw.githubusercontent.com/neolao/documentation/master/zsh-mac/.zshrc
 ```
+
+## Install ZSH plugins
+
+```bash
+zplug install
+```
