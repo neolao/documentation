@@ -5,6 +5,13 @@ export EDITOR=nvim
 export ZPLUG_HOME=~/.zplug
 source ~/.zplug/init.zsh
 zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+zplug load
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -120,3 +127,6 @@ fi
 
 # MONO
 export MONO_GAC_PREFIX="/usr/local"
+
+
+
