@@ -21,6 +21,15 @@ https://ohmyz.sh/
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+
+## Install Plugin manager for ZSH
+
+https://github.com/zplug/zplug
+
+```bash
+brew install zplug
+```
+
 ## Install powerlevel9k theme
 
 https://github.com/Powerlevel9k/powerlevel9k
