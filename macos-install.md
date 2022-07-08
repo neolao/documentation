@@ -41,5 +41,5 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 ## Install .zshrc
 
 ```bash
-wget https://raw.githubusercontent.com/neolao/documentation/master/zsh/.zshrc
+wget https://raw.githubusercontent.com/neolao/documentation/master/zsh-mac/.zshrc
 ```
