@@ -24,5 +24,11 @@ Créer le fichier `~/custom.sh` :
 ```bash
 #!/bin/bash
 
-~/syncthing.sh
+export HOME=/userdata/system
+
+case "$1" in
+  start)
+    /userdata/system/syncthing.sh
+    ;;
+esac
 ```
