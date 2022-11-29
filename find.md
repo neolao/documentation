@@ -49,3 +49,11 @@ Créer un fichier qui aggrège tous les contenus trouvés
 ```bash
 find . -type f -path "./*/www/locale/*" -name 'en_US.csv' -print -exec cat {}  \; > /tmp/locales.csv
 ```
+
+Remettre les permissions des dossiers et fichiers
+-------------------------------------------------
+
+```bash
+find . -type d -exec chmod 755 {} \;
+find . -type f -exec chmod 644 {} \;
+```
